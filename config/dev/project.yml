@@ -1,0 +1,19 @@
+project:
+  name: banking-data-platform
+  environment: dev
+  domain: retail-banking
+
+data:
+  synthetic_only: true
+  default_currency: GBP
+
+processing:
+  load_type: incremental
+  bronze_layer: bronze
+  silver_layer: silver
+  gold_layer: gold
+
+cost_control:
+  portfolio_mode: true
+  auto_terminate_compute: true
+  avoid_always_on_compute: true
